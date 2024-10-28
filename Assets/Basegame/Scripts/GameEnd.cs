@@ -16,7 +16,7 @@ public class GameEnd : MonoBehaviour
     {
         if (FindObjectOfType<GameManager>().gameended)
         {
-            Invoke("gameoverUItrig", 1F);
+            Invoke("gameoverUItrig", 0F);
         }
 
     }
