@@ -9,6 +9,7 @@ public class GameEnd : MonoBehaviour
 {
 
     public RawImage gameover;
+    public Animator animator;
 
 
     // Update is called once per frame
@@ -16,9 +17,16 @@ public class GameEnd : MonoBehaviour
     {
         if (FindObjectOfType<GameManager>().gameended)
         {
-            Invoke("gameoverUItrig", 1F);
+            gameoverUItrig();
         }
-
+        if (gameover.enabled && animator != null)
+        {
+            animator.enabled = true;
+        }
+        else
+        {
+            animator.enabled = false;
+        }
     }
 
 
